@@ -8,7 +8,7 @@ import org.eclipse.microprofile.reactive.messaging.Emitter;
 
 @ApplicationScoped
 public class KafkaService {
-    @Channel("chat-messages")
+    @Channel("chat-out")
     Emitter<Message> messageEmitter;
 
     public Uni<Void> sendMessage(Message message) {

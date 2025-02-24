@@ -32,14 +32,11 @@ public class Message extends PanacheEntity {
     public boolean isBroadcast;
 
     // Constructors
-    public Message() {}
+    public Message() {
 
-    public Message(User sender, String content, boolean isGroupMessage, boolean isBroadcast) {
-        this.sender = sender;
-        this.content = content;
-        this.isGroupMessage = isGroupMessage;
-        this.isBroadcast = isBroadcast;
     }
+
+
 
     // Getters and setters (if not using Lombok)
     public User getSender() {
@@ -96,5 +93,18 @@ public class Message extends PanacheEntity {
 
     public void setBroadcast(boolean broadcast) {
         isBroadcast = broadcast;
+    }
+
+    @Override
+    public String toString() {
+        return "Message{" +
+                "sender=" + sender +
+                ", recipient=" + recipient +
+                ", group=" + group +
+                ", content='" + content + '\'' +
+                ", timestamp=" + timestamp +
+                ", isGroupMessage=" + isGroupMessage +
+                ", isBroadcast=" + isBroadcast +
+                '}';
     }
 }

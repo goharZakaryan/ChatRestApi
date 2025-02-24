@@ -11,6 +11,9 @@ public class User extends PanacheEntity {
     public String password;
     public String email;
 
+    public User() {
+    }
+
     public String getUsername() {
         return username;
     }
